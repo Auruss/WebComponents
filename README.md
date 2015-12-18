@@ -5,6 +5,8 @@ A simple demonstration for web compoments compilation and usage
 ```bash
 git clone https://github.com/Auruss/WebComponents.git
 cd WebComponents
+git submodule init
+git submodule update
 npm i
 npm i gulp -g
 gulp dev
