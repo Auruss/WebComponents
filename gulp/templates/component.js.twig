@@ -1,0 +1,25 @@
+// TODO allow import disabling for non runtime usages
+
+// Import all templates
+{% if runtimeTemplates %}
+	{% for template in templates %}
+		import template_{{ template.name }} from {{ template.module }};
+	{% endfor %}
+{% endif %}
+
+// Import all styles
+// TODO
+
+class Component_{{ name }} {
+	{% if runtimeTemplates %}
+	get templates () {
+		return [
+			{% for template in templates %}
+				template_{{ template.name }},
+			{% endfor %}
+		];
+	};
+	{% endif %}
+};
+
+export default instance = new Component_{{ name }}();

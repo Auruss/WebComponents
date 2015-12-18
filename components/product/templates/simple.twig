@@ -1,0 +1,26 @@
+{% block dependencies %}
+    {{ import ("js",   "components/cart")           }}
+    {{ import ("scss", "components/product/simple") }}
+    {{ import ("scss", "components/product/price")  }}
+{% endblock %}
+
+{% block content %}
+    <div class="product" data-product-id="{{ product.id }}">
+        <div class="name">{{ product.name }}</div>
+        <div class="description">{{ product.desc }}</div>
+        <div class="price-default">{{ product.price }}</div>
+        <div class="in-cart">Loading...</div>
+    </div>
+{% endblock %}
+
+{% block scripts %}
+    {% if false %}
+        <script>
+    {% endif %}
+
+    console.log('a simple product view has been added');
+
+    {% if false %}
+        </script>
+    {% endif %}
+{% endblock %}

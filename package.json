@@ -1,0 +1,22 @@
+{
+  "name": "web-components",
+  "version": "1.0.0",
+  "description": "A simple demonstration for web compoments compilation and usage",
+  "main": "Gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Auruss/WebComponents.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Auruss/WebComponents/issues"
+  },
+  "homepage": "https://github.com/Auruss/WebComponents#readme",
+  "devDependencies": {
+    "gulp": "^3.9.0"
+  }
+}

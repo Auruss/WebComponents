@@ -1,0 +1,9 @@
+{% block dependencies %}
+    {{ import ("template", "components/product/simple")  }}
+    {{ import ("scss",     "components/common/page")     }}
+    {{ import ("scss",     "components/common/elements") }}
+{% endblock %}
+
+{% block content %}
+    {% include "components/product/simple.twig" with { product: product } %}
+{% endblock %}

@@ -1,0 +1,21 @@
+class TwigTemplate_{{ name }} {
+	constructor() {
+		this.template = "{{ content }}";
+		this.compiledRenderFunction = null;
+	}
+
+	/**
+	 * Renders twig template using the given data
+	 * (returns one string per defined block)
+	 */
+	render (data) {
+	};
+
+	/**
+	 * Reloads twig template from server (busts cache using random parameters)
+	 */
+	reload () {
+	};
+};
+
+export default instance = new TwigTemplate_{{ name }}();
