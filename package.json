@@ -4,7 +4,8 @@
   "description": "A simple demonstration for web compoments compilation and usage",
   "main": "Gulpfile.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "install": "git submodule init && git submodule update && cd lib/extern/jquery/ && npm i && npm run build && npm i gulp -g"
   },
   "repository": {
     "type": "git",

@@ -1,3 +1,9 @@
 [submodule "lib/extern/twig"]
 	path = lib/extern/twig
 	url = https://github.com/justjohn/twig.js.git
+[submodule "lib/extern/lodash"]
+	path = lib/extern/lodash
+	url = https://github.com/lodash/lodash.git
+[submodule "lib/extern/jquery"]
+	path = lib/extern/jquery
+	url = git://github.com/jquery/jquery.git
