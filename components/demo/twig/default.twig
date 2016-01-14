@@ -1,0 +1,20 @@
+{% block dependencies %}
+    {{ import ("template", "components/menu")  }}
+{% endblock %}
+
+{% block content %}
+    <html>
+    <head></head>
+    <body>
+        <div class="content">
+            <div class="menu">
+                {% include "components/menu" with { menu: [ 'product', 'category', 'cart' ] } %}
+            </div>
+
+            <div class="page">
+                Click a menu entry above to continue.
+            </div>
+        </div>
+    </body>
+    </html>
+{% endblock %}

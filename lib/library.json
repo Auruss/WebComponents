@@ -1,5 +1,8 @@
 {
   "scripts": [
-    "extern/twig/twig.js"
+    "lib/extern/lodash/dist/lodash.js",
+    "lib/extern/jquery/dist/jquery.js",
+    "lib/extern/twig/twig.js",
+    "lib/Application.js"
   ]
 }

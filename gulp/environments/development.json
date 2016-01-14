@@ -1,0 +1,5 @@
+{
+  "minifyJS": false,
+  "minifyCSS": false,
+  "minifyTwig": false
+}

@@ -13,18 +13,49 @@ gulp dev
 
 Don't worry if "npm i" takes some time, it will init submodules, compile jquery and also install gulp globally.
 Depending on your system "npm i" needs to be ran as root/admin (because it installs gulp globally)
-This will gather all dependencies, compile everything together and run the demo server by default hosted on http://localhost:8082
+When gulp is done you can simply open demo/index.html in any browser.
 
 ## Features
 - Components
     - SCSS
-        - Can't depend on templates or Javascripts
+        - Must be written independent from javascripts and templates, they can depend on other scss files though
     - Templates
         - Can depend on templates and javascripts
     - ES6 Javascript
         - Can depend on templates and javascripts
 
-## Syntax
+## Combined with Web Components Standard
+### Twig
+```twig
+{% block dependencies %}
+    {{ import ("component", "components/test" );
+{% endblock %}
+
+{% block content %}
+    <my-test-component>
+        <my-test-entry>1</my=test-entry>
+        <my-test-entry>
+            <h1>hello</h1>
+        </my=test-entry>
+        <my-test-entry hidden='true'>3</my=test-entry>
+    </my-test-component>
+{% endblock %}
+```
+
+## JS
+```js
+import testComponent from 'components/test';
+
+var element = testComponent.create()
+    .with('my-test-entry', {}, '1')
+    .with('my-test-entry', {}, testComponent.createChild()
+        .with('h1', {}, 'hello'))
+    .with('my-test-entry', {'hidden': true}, '3');
+
+$('body').append(element);
+```
+
+## Syntax for including / requiring parts of components
 ### Twig
 Keep in mind that this additional block won't be visible after compilation.
 ```twig
@@ -53,4 +84,10 @@ styling1.inject(() => { console.log('styling1 done'); });
 styling2.inject(() => { console.log('styling2 done'); });
 module1.hello();
 console.log(template1.render({/* ... */ }));
+```
+
+### SCSS
+SCSS' import syntax is used
+```scss
+@import "components/test/styling1"
 ```

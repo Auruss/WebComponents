@@ -10,6 +10,12 @@ class StyleTemplate_{{ name }} {
 	 */
 	reload (callback) {
 	};
+
+	/**
+	 * Removes the stylesheet from DOM (when injecting again browser cache won't be busted)
+     */
+	remove (callback) {
+	};
 };
 
 export default instance = new TwigTemplate_{{ name }}();
