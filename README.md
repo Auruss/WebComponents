@@ -56,6 +56,7 @@ var element = testComponent.create()
 
 $('body').append(element);
 ```
+Keep in mind that when creating a bigger element frontend templates should be used instead,
 
 ## Syntax for including / requiring parts of components
 ### Twig
