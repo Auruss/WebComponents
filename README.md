@@ -1,6 +1,8 @@
 # WebComponents
 A simple demonstration for web compoments compilation and usage
 
+# The sample app / demo is not done and currently only a playground for testing
+
 ## Using
 Make sure npm is installed correctly first!
 
@@ -42,7 +44,7 @@ When gulp is done you can simply open demo/index.html in any browser.
 {% endblock %}
 ```
 
-## JS
+### JS
 ```js
 import testComponent from 'components/test';
 
@@ -91,3 +93,6 @@ SCSS' import syntax is used
 ```scss
 @import "components/test/styling1"
 ```
+
+## Overhead / Polyfill
+Templates are used to generate the required overhead, take a look at gulp/templates/ to see what code will actually generated
